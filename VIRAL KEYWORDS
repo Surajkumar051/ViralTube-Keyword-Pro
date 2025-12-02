@@ -174,7 +174,7 @@
 
     <script type="module">
         // Global variables provided by the environment
-        const apiKey = ""; // API key is handled by the Canvas environment
+        const apiKey = "AIzaSyAdBdaA-iqIseQxz3x-DsLXC99zG-OcYk0"; // API key is handled by the Canvas environment
 
         const apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
 
@@ -261,13 +261,13 @@
                             'Brainstorming Related Content...');
 
             let systemPrompt = "";
-            let useGrounding = false;
+            let useGrounding = false; // Temporarily set to false for debugging
 
             if (mode === 'keywords') {
                 systemPrompt = `You are a world-class YouTube SEO specialist focused on viral video strategy. The user is providing a video topic and needs high-ranking keywords, hashtags, and a killer title. Use the Google Search results to find trending topics, search volume, and competitor strategies. Structure your response clearly using Markdown under these four mandatory headings in this order: "Viral Video Title Suggestion", "High-Ranking Keywords (for the video title and description)", "Strategic Long-Tail Keywords (for description and tags)", and "Top Trending Hashtags (for tags)". 
 - The title suggestion should be concise, attention-grabbing, and optimized for click-through rate (CTR) and searchability.
 - All keyword and hashtag lists must use bullet points (* or -) and reflect real-time search demand and ranking potential for YouTube.`;
-                useGrounding = true;
+                // useGrounding = true; // Original value
             } else if (mode === 'description') {
                  // No grounding needed, LLM drafts based on internal knowledge and the topic
                  systemPrompt = `You are an expert YouTube copywriter. Draft a full, SEO-optimized video description for the topic: "${userQuery}". The description should be structured as follows using Markdown:
@@ -275,10 +275,10 @@
 - Paragraph 2: Details about what the viewer will learn, including a call to action.
 - Paragraph 3: Recommended gear/tools section (if applicable, otherwise generalize).
 - Must include a separate list of 10-15 keywords naturally integrated into the text. Do not use hashtags.`;
-                 useGrounding = false;
+                 // useGrounding = false; // Original value
             } else if (mode === 'ideas') {
                 systemPrompt = `You are a YouTube content strategist. Based on the user's video topic, "${userQuery}", research related trending or evergreen content ideas for a cohesive video series. Provide a list of 5-7 unique video ideas. Structure the output using Markdown with one main heading: "Next Video Series Ideas", followed by a bulleted list where each item is a complete, optimized video title and a brief one-sentence concept.`;
-                useGrounding = true;
+                // useGrounding = true; // Original value
             }
 
             const payload = {
