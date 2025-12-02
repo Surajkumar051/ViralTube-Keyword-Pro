@@ -1,9 +1,7 @@
 # ViralTube-Keyword-Pro
 <<<<<<< HEAD
-## AI Hustle Hub – A secure, modern web &amp; mobile app that helps users discover AI tools, explore daily side hustle ideas, and track opportunities to earn online. Built with Next.js, Firebase, and AI-powered recommendations ##
-=======
-##AI Hustle Hub – A secure, modern web &amp; mobile app that helps users discover AI tools, explore daily side hustle ideas, and track opportunities to earn online. Built with Next.js, Firebase, and AI-powered recommendations ##
->>>>>>> 18c907b3738eb003357cade636c4d43040400e9c
+
+====== AI Hustle Hub – A secure, modern web &amp; mobile app that helps users discover AI tools, explore daily side hustle ideas, and track opportunities to earn online. Built with Next.js, Firebase, and AI-powered recommendations =====
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -293,7 +291,8 @@
                 systemInstruction: { parts: [{ text: systemPrompt }] },
             };
 
-            const url = `${apiUrl}?key=${apiKey}`;
+            const url = `${apiUrl}?key=${AIzaSyAdBdaA-iqIseQxz3x-DsLXC99zG-OcYk0
+}`;
 
             try {
                 let response;
